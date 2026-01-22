@@ -4,7 +4,7 @@ import numpy as np
 
 app = Flask(__name__)
 
-with open("model/wine_cultivar_model.pkl", "rb") as file:
+with open("models/wine_cultivar_model.pkl", "rb") as file:
     model, scaler = pickle.load(file)
 
 @app.route("/", methods=["GET", "POST"])
